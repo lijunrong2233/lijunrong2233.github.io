@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Junrong Li's academic homepage. Research in causal inference, Mendelian randomization, bioinformatics, and therapeutic target discovery.">
+  <meta name="color-scheme" content="light">
+  <title>Junrong Li | Academic Homepage</title>
+  <style>
+    :root {
+      --ink: #202a2a;
+      --muted: #61706d;
+      --line: #d9e1dc;
+      --paper: #fbfcfa;
+      --green: #236c56;
+      --green-soft: #e8f1ec;
+      --blue: #315f79;
+      --blue-soft: #edf3f6;
+      --amber: #a56728;
+      --amber-soft: #f7f0e5;
+      --width: 1040px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 Georgia, "Times New Roman", serif;
+    }
+    a { color: var(--green); text-underline-offset: 3px; }
+    a:hover { color: var(--blue); }
+    a:focus-visible { outline: 3px solid #8eb9a6; outline-offset: 3px; }
+    .wrap { width: min(var(--width), calc(100% - 48px)); margin: 0 auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .topbar { display: flex; justify-content: space-between; align-items: center; min-height: 68px; gap: 20px; }
+    .wordmark { color: var(--ink); font: 600 15px/1.2 Arial, sans-serif; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a { color: var(--muted); font: 14px Arial, sans-serif; text-decoration: none; }
+    nav a:hover { color: var(--green); }
+    .intro { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 64px; align-items: center; padding: 74px 0 68px; }
+    .eyebrow { color: var(--green); font: 700 12px/1.4 Arial, sans-serif; letter-spacing: 1.2px; text-transform: uppercase; }
+    h1 { margin: 10px 0 8px; font: 400 48px/1.1 Georgia, serif; }
+    .affiliation { margin: 0; color: var(--muted); font: 16px/1.7 Arial, sans-serif; }
+    .bio { max-width: 660px; margin: 24px 0 0; color: #394543; font-size: 18px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 24px; font: 14px Arial, sans-serif; }
+    .portrait { width: 220px; aspect-ratio: 1; justify-self: center; border-radius: 50%; background: var(--green-soft); display: grid; place-items: center; color: var(--green); font: 400 76px Georgia, serif; border: 1px solid #d4e4da; }
+    main { padding-bottom: 48px; }
+    section { padding: 36px 0; border-top: 1px solid var(--line); scroll-margin-top: 20px; }
+    h2 { margin: 0 0 20px; font: 400 27px/1.25 Georgia, serif; }
+    .section-note { margin: -10px 0 20px; color: var(--muted); font: 14px Arial, sans-serif; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .research-item { border-top: 3px solid var(--green); padding-top: 12px; }
+    .research-item:nth-child(2) { border-color: var(--blue); }
+    .research-item:nth-child(3) { border-color: var(--amber); }
+    .research-item h3 { margin: 0 0 8px; font: 600 16px/1.4 Arial, sans-serif; }
+    .research-item p { margin: 0; color: var(--muted); font-size: 15px; }
+    .pub-list { list-style: none; padding: 0; margin: 0; }
+    .pub-list li { padding: 17px 0; border-top: 1px solid var(--line); }
+    .pub-list li:first-child { border-top: 0; padding-top: 0; }
+    .pub-title { font-weight: 700; }
+    .pub-meta { display: block; margin-top: 5px; color: var(--muted); font: 14px/1.5 Arial, sans-serif; }
+    .tag { display: inline-block; margin-left: 7px; padding: 2px 7px; border-radius: 3px; background: var(--amber-soft); color: var(--amber); font: 11px/1.6 Arial, sans-serif; vertical-align: 2px; }
+    .timeline { display: grid; grid-template-columns: 170px 1fr; gap: 10px 24px; }
+    .date { color: var(--muted); font: 14px/1.6 Arial, sans-serif; }
+    .entry { padding-bottom: 21px; }
+    .entry strong { display: block; font: 600 16px/1.45 Arial, sans-serif; }
+    .entry p { margin: 3px 0 0; color: var(--muted); font-size: 15px; }
+    .entry ul { margin: 9px 0 0; padding-left: 19px; color: #46524f; font-size: 15px; }
+    .skill-lines { display: grid; grid-template-columns: 150px 1fr; gap: 10px 20px; }
+    .skill-lines strong { font: 600 14px Arial, sans-serif; }
+    .skill-lines span { color: var(--muted); }
+    .awards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; }
+    .award { border-top: 1px solid var(--line); padding: 11px 0; display: flex; justify-content: space-between; gap: 18px; }
+    .award span { color: var(--muted); font: 14px Arial, sans-serif; white-space: nowrap; }
+    footer { border-top: 1px solid var(--line); padding: 22px 0 30px; color: var(--muted); font: 13px Arial, sans-serif; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 36px, var(--width)); }
+      .topbar { align-items: flex-start; padding: 17px 0; flex-direction: column; gap: 14px; }
+      nav { gap: 10px 18px; }
+      .intro { grid-template-columns: 1fr; padding: 48px 0; gap: 28px; }
+      .intro-copy { order: 2; }
+      .portrait { width: 142px; font-size: 52px; }
+      h1 { font-size: 40px; }
+      .bio { font-size: 17px; }
+      .research-grid { grid-template-columns: 1fr; gap: 20px; }
+      .timeline { grid-template-columns: 1fr; gap: 3px; }
+      .date { margin-top: 4px; }
+      .entry { padding-bottom: 18px; }
+      .skill-lines { grid-template-columns: 1fr; gap: 4px; }
+      .skill-lines span { margin-bottom: 10px; }
+      .awards { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="wordmark" href="#home">Junrong Li</a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#awards">Awards</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="home">
+    <div class="intro">
+      <div class="intro-copy">
+        <div class="eyebrow">Academic Homepage</div>
+        <h1>Junrong Li</h1>
+        <p class="affiliation">Faculty of Applied Sciences<br>Macau Polytechnic University, Macau SAR, China</p>
+        <p class="bio">I work across causal inference, bioinformatics, and data-driven therapeutic discovery. My research applies Mendelian randomization, colocalization, and molecular analysis to investigate disease mechanisms and potential therapeutic targets.</p>
+        <div class="contact">
+          <a href="mailto:p2213983@mpu.edu.mo">Email</a>
+          <a href="https://github.com/lijunrong2233" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="Junrong Li initials">JL</div>
+    </div>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="research-grid">
+        <article class="research-item"><h3>Causal Inference</h3><p>Mendelian randomization and causal graph modeling to investigate disease risk factors and causal relationships.</p></article>
+        <article class="research-item"><h3>Bioinformatics</h3><p>Colocalization, gene enrichment, protein interaction networks, and multi-omics analysis.</p></article>
+        <article class="research-item"><h3>Therapeutic Discovery</h3><p>Target prioritization, virtual screening, and molecular docking for candidate compounds.</p></article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <p class="section-note">Two published papers and two manuscripts under review.</p>
+      <ol class="pub-list">
+        <li><span class="pub-title">Integrated Causal Inference Modeling Uncovers Novel Causal Factors and Potential Therapeutic Targets of Qingjin Yiqi Granules for Chronic Fatigue Syndrome.</span><span class="pub-meta">Li, J., Zhai, X., Liu, J., Lam, C. et al. <i>Acupuncture and Herbal Medicine</i>, 2024, 4:122-133.</span></li>
+        <li><span class="pub-title">A Novel Lightweight Deep Learning Fall Detection System Based on Global-Local Attention and Channel Feature Augmentation.</span><span class="pub-meta">Sha, Y., Zhai, X., Li, J., Meng, W. et al. <i>Interdisciplinary Nursing Research</i>, 2023, 2:68-75.</span></li>
+        <li><span class="pub-title">The Association and Causality Between Chronic Fatigue Syndrome and Chronic Obstructive Pulmonary Disease: Results from a Population-based Cross-Sectional Study and a Bidirectional Mendelian Randomization Analysis.</span><span class="pub-meta">Li, J., Xing, A., Zhai, X., Luo, G. et al. <span class="tag">Under review</span></span></li>
+        <li><span class="pub-title">Multi-modal Mendelian Randomization Reveals Causal Links Between Alzheimer’s Disease Genetics and Brain Connectivity: Implications of Polygenic Mechanisms Through SNP Mapping and Enrichment Analysis.</span><span class="pub-meta">Ji, J., Li, Z., Luo, G., Li, J. et al. <span class="tag">Under review</span></span></li>
+      </ol>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="date">Sep 2022 – Jun 2024</div><div class="entry"><strong>MSc in Big Data &amp; Internet of Things</strong><p>Macau Polytechnic University, Macau SAR, China · GPA 3.07/4.00</p></div>
+        <div class="date">Jul 2019</div><div class="entry"><strong>Exchange Student</strong><p>The University of Queensland, Brisbane, Australia</p></div>
+        <div class="date">Sep 2018 – Jun 2022</div><div class="entry"><strong>BSc in Software Engineering</strong><p>Henan University of Science and Technology, Henan, China · GPA 4.05/5.00</p></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Research Experience</h2>
+      <div class="timeline">
+        <div class="date">Jan 2023 – Present</div>
+        <div class="entry"><strong>Research Assistant · Shenyang Pharmaceutical University</strong><p>Macau SAR, China · Advisors: Prof. Kefeng Li and Prof. Guixia Ling</p><ul><li>Applied Mendelian randomization and colocalization to identify shared targets while accounting for potential confounding.</li><li>Performed gene enrichment and protein-protein interaction analyses to characterize candidate therapeutic targets.</li><li>Used molecular docking to evaluate binding energies and interactions between drug candidates and molecular targets.</li></ul></div>
+        <div class="date">Jan 2023 – Aug 2023</div>
+        <div class="entry"><strong>Research Assistant · Macau Polytechnic University</strong><p>Macau SAR, China · Advisor: Prof. Kefeng Li</p><ul><li>Conducted proteome-wide two-sample Mendelian randomization to identify proteins associated with causal factors of chronic fatigue syndrome.</li><li>Performed virtual screening of Qingjin Yiqi Granules compounds against chronic fatigue syndrome-associated proteins.</li></ul></div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Awards &amp; Honors</h2>
+      <div class="awards">
+        <div class="award">First-class Scholarship for Undergraduate Students <span>2018</span></div>
+        <div class="award">Second-class Scholarship for Undergraduate Students <span>2019</span></div>
+        <div class="award">Second Prize, 6th “Internet+” Innovation Competition <span>2019</span></div>
+        <div class="award">First Prize, 9th “Challenge Cup” Competition, China <span>2020</span></div>
+        <div class="award">First Prize, 7th “Internet+” Innovation Competition <span>2020</span></div>
+        <div class="award">English CET-4 and CET-6 <span>2018</span></div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-lines">
+        <strong>Programming</strong><span>R (proficient), Python (proficient), C/C++ (advanced), SQL (advanced), LaTeX</span>
+        <strong>Tools</strong><span>Git, Jupyter, PyTorch, TensorFlow, MySQL, SQL Server, PyCharm, PhpStorm</span>
+        <strong>Interests</strong><span>Piano, guzheng, drum kit, running</span>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year">2026</span> Junrong Li · Macau Polytechnic University</div></footer>
+</body>
+</html>
